@@ -1,0 +1,140 @@
+﻿<Window x:Class="LAX_AS_WPF.Slet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAX_AS_WPF"
+        mc:Ignorable="d"
+        Title="Slet" Height="450" Width="800">
+    <Canvas>
+        <Border Background="LightBlue" 
+                BorderBrush="Black"
+                Height="20"
+                Width="800"
+        ></Border>
+
+        <Button Name="Tilbage"
+                Content="Tilbage"
+                Background="LightBlue"
+                BorderBrush="Gray"
+                Height="20" 
+                Width="80"
+                BorderThickness="0.5"
+                FontSize="10" 
+                Click="BtnClickTilbage">
+        </Button>
+
+        <TextBlock FontSize="22" Canvas.Right="532" Canvas.Top="50" Canvas.Left="360">Søg film</TextBlock>
+        <TextBox
+            Name="InputSøg"
+            Height="20"
+            Width="400"
+            Canvas.Left="200"
+            Canvas.Top="91" KeyDown="EnterPressed"
+            
+            ></TextBox>
+
+        <Button
+            Name="Søg"
+            Content="Søg"
+            Height="18" 
+            Width="200
+            "
+            BorderThickness="0.5"
+            FontSize="10" 
+            Canvas.Left="300"
+            Canvas.Top="116" 
+            Click="BtnClickSøg"
+            ></Button>
+
+
+
+
+        <TextBlock x:Name="LabelTitel" TextAlignment="Right" Canvas.Right="532" Canvas.Top="152" Canvas.Left="244">Film titel :</TextBlock>
+        <TextBox
+            Name="InputTitel"
+            Height="20"
+            Width="300"
+            Canvas.Left="299"
+            Canvas.Top="152" Visibility="Visible" IsEnabled="False"
+            
+            ></TextBox>
+
+        <TextBlock x:Name="LabelInstruk" TextAlignment="Right" Canvas.Right="532" Canvas.Top="182" Canvas.Left="213">Film instruktør :</TextBlock>
+        <TextBox
+            Name="InputInstruk"
+            Height="20"
+            Width="300"
+            Canvas.Left="299"
+            Canvas.Top="182" IsEnabled="False"
+            
+            ></TextBox>
+
+        <TextBlock x:Name="LabelUdgivelse" TextAlignment="Right" Canvas.Right="532" Canvas.Top="212" Canvas.Left="222">Udgivelsesår :</TextBlock>
+        <TextBox
+            Name="InputUdgivelse"
+            Height="20"
+            Width="300"
+            Canvas.Left="299"
+            Canvas.Top="212" IsEnabled="False"
+            
+            ></TextBox>
+
+        <TextBlock x:Name="LabelOm" TextAlignment="Right" Canvas.Right="532" Canvas.Top="242" Canvas.Left="233">Om filmen :</TextBlock>
+        <RichTextBox
+            Name="InputOm"
+            Height="60"
+            Width="300"
+            Canvas.Left="299"
+            Canvas.Top="242" IsEnabled="False"
+            
+            ></RichTextBox>
+
+        <TextBlock x:Name="LabelNomi" TextAlignment="Right" Canvas.Right="532" Canvas.Top="312" Canvas.Left="216">Nomineringer :</TextBlock>
+        <TextBox
+            Name="InputNomi"
+            Height="20"
+            Width="300"
+            Canvas.Left="299"
+            Canvas.Top="312" IsEnabled="False"
+            
+            ></TextBox>
+
+        <TextBlock x:Name="LabelVundet" TextAlignment="Right" Canvas.Right="532" Canvas.Top="342" Canvas.Left="251">Vundet :</TextBlock>
+        <CheckBox
+            Name="CheckVundet"
+            Canvas.Left="299"
+            Canvas.Top="342" IsEnabled="False"
+            ></CheckBox>
+
+
+        <Button
+            Name="Annuller"
+            Content="Anuller"
+            Height="18" 
+            Width="70"
+            BorderThickness="0.5"
+            FontSize="10" 
+            Canvas.Left="447"
+            Canvas.Top="366" 
+            Click="BtnClickAnuller"
+            ></Button>
+
+
+
+        <Button
+            Name="Sletfilm"
+            Content="Slet film"
+            Background="OrangeRed"
+            Height="18" 
+            Width="70"
+            BorderThickness="0.5"
+            FontSize="10" 
+            Canvas.Left="527"
+            Canvas.Top="366" 
+            Click="BtnClickSlet" Visibility="Visible"
+            ></Button>
+
+
+    </Canvas>
+</Window>

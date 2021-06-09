@@ -1,0 +1,64 @@
+﻿<Window x:Class="LAX_AS_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAX_AS_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+
+
+        <Border Background="LightBlue" 
+                BorderBrush="Black"
+                Height="20"
+                Width="800"
+        ></Border>
+
+        <TextBlock FontSize="20" Canvas.Left="232" Canvas.Top="70"> Velkommen til LAX Film-nomineringer</TextBlock>
+        <TextBlock FontSize="14" Canvas.Left="331" Canvas.Top="203"> Vælg hvad du vil gøre</TextBlock>
+
+
+        <Button Name="Opret"
+                Content="Opret film"
+                Background="LightBlue"
+                Height="20" 
+                Width="80" 
+                Canvas.Top="243"
+                Canvas.Left="258"
+                FontSize="10" 
+                Click="BtnClickOpret">
+        </Button>
+
+        <Button Name="Rediger"
+                Content="Rediger film"
+                Background="LightBlue"
+                Height="20" 
+                Width="80" 
+                Canvas.Top="243"
+                Canvas.Left="358"
+                FontSize="10" Click="BtnClickRediger">
+        </Button>
+
+        <Button Name="Slet"
+                Content="Slet film"
+                Background="LightBlue"
+                Height="20" 
+                Width="80" 
+                Canvas.Top="243"
+                Canvas.Left="458"
+                FontSize="10" Click="BtnClickSlet">
+        </Button>
+
+        <Button Name="Forbind"
+                Content="Forbind til database"
+                Background="LightGray"
+                Height="20" 
+                Width="140" 
+                Canvas.Top="300"
+                Canvas.Left="328"
+                FontSize="10" Click="BtnClickForbind">
+        </Button>
+
+    </Canvas>
+</Window>

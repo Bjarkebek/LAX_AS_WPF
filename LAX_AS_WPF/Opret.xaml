@@ -1,0 +1,117 @@
+﻿<Window x:Class="LAX_AS_WPF.Opret"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAX_AS_WPF"
+        mc:Ignorable="d"
+        Title="Opret" Height="450" Width="800">
+    <Canvas>
+        <Border Background="LightBlue" 
+                BorderBrush="Black"
+                Height="20"
+                Width="800"
+        ></Border>
+
+        <Button Name="Tilbage"
+                Content="Tilbage"
+                Background="LightBlue"
+                BorderBrush="Gray"
+                Height="20" 
+                Width="80"
+                BorderThickness="0.5"
+                FontSize="10" 
+                Click="BtnClickTilbage" IsCancel="True">
+        </Button>
+
+
+        <TextBlock FontSize="22" Canvas.Right="532" Canvas.Top="50" Canvas.Left="351">Opret film</TextBlock>
+
+        <TextBlock TextAlignment="Right" Canvas.Right="532" Canvas.Top="152" Canvas.Left="239">Film titel* :</TextBlock>
+        <TextBox
+            Name="InputTitel"
+            Height="20"
+            Width="300"
+            Canvas.Left="299"
+            Canvas.Top="152"
+            
+            ></TextBox>
+
+        <TextBlock TextAlignment="Right" Canvas.Right="532" Canvas.Top="182" Canvas.Left="208">Film instruktør* :</TextBlock>
+        <TextBox
+            Name="InputInstruk"
+            Height="20"
+            Width="300"
+            Canvas.Left="299"
+            Canvas.Top="182"
+            
+            ></TextBox>
+
+        <TextBlock TextAlignment="Right" Canvas.Right="532" Canvas.Top="212" Canvas.Left="217">Udgivelsesår* :</TextBlock>
+        <TextBox
+            Name="InputUdgivelse"
+            Height="20"
+            Width="300"
+            Canvas.Left="299"
+            Canvas.Top="212"
+            
+            ></TextBox>
+
+        <TextBlock TextAlignment="Right" Canvas.Right="532" Canvas.Top="242" Canvas.Left="228">Om filmen* :</TextBlock>
+        <RichTextBox
+            Name="InputOm"
+            Height="60"
+            Width="300"
+            Canvas.Left="299"
+            Canvas.Top="242"
+            
+            ></RichTextBox>
+
+        <TextBlock TextAlignment="Right" Canvas.Right="532" Canvas.Top="312" Canvas.Left="216">Nomineringer :</TextBlock>
+        <TextBox
+            Name="InputNomi"
+            Height="20"
+            Width="300"
+            Canvas.Left="299"
+            Canvas.Top="312"
+            
+            />
+
+        <TextBlock TextAlignment="Right" Canvas.Right="532" Canvas.Top="342" Canvas.Left="251">Vundet :</TextBlock>
+        <CheckBox
+            Name="CheckVundet"
+            Canvas.Left="299"
+            Canvas.Top="342"
+            ></CheckBox>
+
+
+        <Button
+            Name="Annuller"
+            Content="Anuller"
+            Height="18" 
+            Width="70"
+            BorderThickness="0.5"
+            FontSize="10" 
+            Canvas.Left="447"
+            Canvas.Top="366" 
+            Click="BtnClickAnuller"
+            />
+
+
+
+        <Button
+            Name="Gem"
+            Content="Gem"
+            Height="18" 
+            Width="70"
+            BorderThickness="0.5"
+            FontSize="10" 
+            Canvas.Left="527"
+            Canvas.Top="366" 
+            Click="BtnClickGem" IsDefault="True"
+            ></Button>
+
+        <TextBlock TextAlignment="Right" Canvas.Right="5" Canvas.Bottom="5">*Skal udfyldes</TextBlock>
+
+    </Canvas>
+</Window>
