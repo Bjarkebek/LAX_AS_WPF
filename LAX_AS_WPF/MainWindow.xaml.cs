@@ -27,6 +27,7 @@ namespace LAX_AS_WPF
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
+        //Åbner 'Opret' Vinduet
         private void BtnClickOpret(object sender, RoutedEventArgs e)
         {
             Opret objOpret = new();
@@ -34,6 +35,7 @@ namespace LAX_AS_WPF
             objOpret.Show();
         }
 
+        //Åbner 'Rediger' Vinduet
         private void BtnClickRediger(object sender, RoutedEventArgs e)
         {
             Rediger objRediger = new Rediger();
@@ -41,6 +43,7 @@ namespace LAX_AS_WPF
             objRediger.Show();
         }
 
+        //Åbner 'Slet' Vinduet
         private void BtnClickSlet(object sender, RoutedEventArgs e)
         {
             Slet objSlet = new Slet();
@@ -48,6 +51,7 @@ namespace LAX_AS_WPF
             objSlet.Show();
         }
 
+        //Verificerer forbindelse til database
         private void BtnClickForbind(object sender, RoutedEventArgs e)
         {
             try

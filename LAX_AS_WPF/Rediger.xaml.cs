@@ -43,7 +43,7 @@ namespace LAX_AS_WPF
         {
             bool FilmCheckBool = true;
             string connection = @"Data Source=10.0.5.102,1433;Initial Catalog=LAX_DB;User ID=sa; Password=Guest1234";
-            string sql, Output = "";
+            string Output = "";
             SqlConnection cnn = new(connection);
             SqlCommand command;
             SqlDataReader dataReader;
@@ -55,8 +55,7 @@ namespace LAX_AS_WPF
             //Prøver at finde filmen
             try
             {
-                sql = $"SELECT FilmTitel FROM Film WHERE FilmTitel = '{InputSøg.Text}' ";
-                command = new(sql, cnn);
+                command = new($"SELECT FilmTitel FROM Film WHERE FilmTitel = '{InputSøg.Text}' ", cnn);
                 dataReader = command.ExecuteReader();
                 while (dataReader.Read())
                     Output += dataReader.GetValue(0);
@@ -173,8 +172,6 @@ namespace LAX_AS_WPF
             //sletter al tekst i input felter og gør felterne og labels usynlige igen hvis film ikke kunne findes
             else
             {
-
-
                 InputSøg.Clear();
                 InputTitel.Clear();
                 InputInstruk.Clear();

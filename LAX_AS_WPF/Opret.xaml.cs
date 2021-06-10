@@ -45,15 +45,15 @@ namespace LAX_AS_WPF
                     //this.Close();
                     break;
 
-                case MessageBoxResult.No:
-
+                case MessageBoxResult.No: //Annullerer annulleringen
                     break;
+
             }
         }
 
         private void BtnClickGem(object sender, RoutedEventArgs e)
         {
-            //tager alle inputs og sætter dem ind i en variabel
+            //tager alle inputs og sætter dem ind i variabler
             string Value1 = InputTitel.Text;
             string Value2 = InputInstruk.Text;
             Nullable<int> Value3;
@@ -69,16 +69,15 @@ namespace LAX_AS_WPF
 
 
 
-
+            //Connectionstring og adapter- og connecter objekter
             string connection = @"Data Source=10.0.5.102,1433;Initial Catalog=LAX_DB;User ID=sa; Password=Guest1234";
-            string sql;
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlConnection cnn = new(connection);
 
             try { cnn.Open(); }
             catch { MessageBox.Show("DB connection error! Database could not be reached"); }
 
-
+            //Sørger for at 'FilmUdgiv' kun består af tal 
             try { Value3 = Convert.ToInt32(InputUdgivelse.Text); }
             catch
             {
@@ -91,10 +90,10 @@ namespace LAX_AS_WPF
 
                 try
                 {
-                    //hvis filmen er blevet nomineret vil Value5 have text i sig, og derfor være længere end 1
+                    //hvis filmen er blevet nomineret vil Value5 have text i sig, og derfor være længere end '0'
                     if (Value5.Length > 0)
                     {
-                        sql = $"INSERT INTO Film (FilmTitel, FilmInstruk, FilmUdgiv, FilmOm, FilmNomi, NomiVundet) " +
+                        string sql = $"INSERT INTO Film (FilmTitel, FilmInstruk, FilmUdgiv, FilmOm, FilmNomi, NomiVundet) " +
                                      $"VALUES('{Value1}', '{Value2}', '{Value3}', '{Value4}', '{Value5}', '{Value6}')";
                         SqlCommand command = new(sql, cnn);
                         adapter.InsertCommand = new SqlCommand(sql, cnn);
@@ -105,7 +104,7 @@ namespace LAX_AS_WPF
                     //hvis filmen ikke har en nomination bliver Value5 til NULL da der så ikke er noget input
                     else
                     {
-                        sql = $"INSERT INTO Film (FilmTitel, FilmInstruk, FilmUdgiv, FilmOm) " +
+                        string sql = $"INSERT INTO Film (FilmTitel, FilmInstruk, FilmUdgiv, FilmOm) " +
                                      $"VALUES('{Value1}', '{Value2}', '{Value3}', '{Value4}')";
                         SqlCommand command = new(sql, cnn);
                         adapter.InsertCommand = new SqlCommand(sql, cnn);
