@@ -92,7 +92,7 @@ namespace LAX_AS_WPF
                 try
                 {
                     //hvis filmen er blevet nomineret vil Value5 have text i sig, og derfor være længere end 1
-                    if (Value5.Length > 1)
+                    if (Value5.Length > 0)
                     {
                         sql = $"INSERT INTO Film (FilmTitel, FilmInstruk, FilmUdgiv, FilmOm, FilmNomi, NomiVundet) " +
                                      $"VALUES('{Value1}', '{Value2}', '{Value3}', '{Value4}', '{Value5}', '{Value6}')";

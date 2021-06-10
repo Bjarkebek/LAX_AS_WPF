@@ -239,7 +239,6 @@ namespace LAX_AS_WPF
             int Value3 = Convert.ToInt32(InputUdgivelse.Text);
             InputOm.SelectAll();
             string Value4 = InputOm.Selection.Text;
-
             string Value5 = InputNomi.Text;
             int Value6;
             if (CheckVundet.IsChecked == true)
